@@ -3,7 +3,7 @@ import {
   FETCH_CHEESES_REQUEST,
   FETCH_CHEESES_SUCCESS,
   ADD_CHEESE,
-} from '../actions/cheese';
+} from '../actions/';
 
 const initialState = {
   cheeses: [],
