@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Chess from 'react-chess';
+import ChessGame from './ChessGame';
 
-ReactDOM.render(<Chess />, document.getElementById('root'));
+ReactDOM.render(<ChessGame />, document.getElementById('root'));
 
