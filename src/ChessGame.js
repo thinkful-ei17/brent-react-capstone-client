@@ -12,6 +12,7 @@ export class ChessGame extends React.Component {
   }
 
   onMovePiece(piece, from, to) {
+    console.log(this.props);
     const moveObj = { from, to };
     this.props.dispatch(makeMove(moveObj));
   }
@@ -27,4 +28,7 @@ export class ChessGame extends React.Component {
   }
 }
 
-export default connect()(ChessGame);
+const mapStateToProps = state => ({
+  board: state,
+});
+export default connect(mapStateToProps)(ChessGame);

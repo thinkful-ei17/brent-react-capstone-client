@@ -6,3 +6,7 @@ export const makeMove = move => ({
   move,
 });
 
+export const MAKE_MOVE_FAILED = 'MAKE_MOVE_FAILED';
+// export const makeMoveFailed = err => ({
+
+// })
