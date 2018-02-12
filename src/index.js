@@ -1,15 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import './index.css';
-import store from './store/';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+const React = require('react')
+const ReactDOM = require('react-dom')
+const Demo = require('./demo/demo')
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root'),
-);
-registerServiceWorker();
+ReactDOM.render(<Demo />, document.getElementById('root'))
