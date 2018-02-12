@@ -1,5 +1,5 @@
-const React = require('react')
-const piecePositionHoc = require('../piecePositionHoc')
+import React from 'react';
+import piecePositionHoc from '../piecePositionHoc';
 
 function WhitePawn(props) {
   return (
@@ -13,7 +13,7 @@ function WhitePawn(props) {
         {...props}
       />
     </svg>
-  )
+  );
 }
 
-module.exports = piecePositionHoc(WhitePawn)
+module.exports = piecePositionHoc(WhitePawn);

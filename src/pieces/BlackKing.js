@@ -1,5 +1,5 @@
-const React = require('react')
-const piecePositionHoc = require('../piecePositionHoc')
+import React from 'react';
+import piecePositionHoc from '../piecePositionHoc';
 
 function BlackKing(props) {
   return (
@@ -10,7 +10,8 @@ function BlackKing(props) {
         stroke="#000"
         strokeWidth="1.5"
         strokeLinecap="round"
-        strokeLinejoin="round">
+        strokeLinejoin="round"
+      >
         <path d="M22.5 11.63V6" strokeLinejoin="miter" />
         <path
           d="M22.5 25s4.5-7.5 3-10.5c0 0-1-2.5-3-2.5s-3 2.5-3 2.5c-1.5 3 3 10.5 3 10.5"
@@ -33,7 +34,7 @@ function BlackKing(props) {
         />
       </g>
     </svg>
-  )
+  );
 }
 
-module.exports = piecePositionHoc(BlackKing)
+module.exports = piecePositionHoc(BlackKing);

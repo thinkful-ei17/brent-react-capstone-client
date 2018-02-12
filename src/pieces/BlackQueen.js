@@ -1,5 +1,5 @@
-const React = require('react')
-const piecePositionHoc = require('../piecePositionHoc')
+import React from 'react';
+import piecePositionHoc from '../piecePositionHoc';
 
 function BlackQueen(props) {
   return (
@@ -10,7 +10,8 @@ function BlackQueen(props) {
         stroke="#000"
         strokeWidth="1.5"
         strokeLinecap="round"
-        strokeLinejoin="round">
+        strokeLinejoin="round"
+      >
         <g fill="#000" stroke="none">
           <circle cx={6} cy={12} r={2.75} />
           <circle cx={14} cy={9} r={2.75} />
@@ -34,7 +35,7 @@ function BlackQueen(props) {
         />
       </g>
     </svg>
-  )
+  );
 }
 
-module.exports = piecePositionHoc(BlackQueen)
+module.exports = piecePositionHoc(BlackQueen);

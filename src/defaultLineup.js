@@ -30,5 +30,5 @@ module.exports = [
   'R@h1',
   'P@h2',
   'p@h7',
-  'r@h8'
-]
+  'r@h8',
+];

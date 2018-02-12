@@ -1,5 +1,5 @@
-const React = require('react')
-const piecePositionHoc = require('../piecePositionHoc')
+import React from 'react';
+import piecePositionHoc from '../piecePositionHoc';
 
 function BlackKnight(props) {
   return (
@@ -56,7 +56,7 @@ function BlackKnight(props) {
         />
       </g>
     </svg>
-  )
+  );
 }
 
-module.exports = piecePositionHoc(BlackKnight)
+module.exports = piecePositionHoc(BlackKnight);

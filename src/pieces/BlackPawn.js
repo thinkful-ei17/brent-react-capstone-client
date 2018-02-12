@@ -1,5 +1,5 @@
-const React = require('react')
-const piecePositionHoc = require('../piecePositionHoc')
+import React from 'react';
+import piecePositionHoc from '../piecePositionHoc';
 
 function BlackPawn(props) {
   return (
@@ -11,7 +11,7 @@ function BlackPawn(props) {
         strokeLinecap="round"
       />
     </svg>
-  )
+  );
 }
 
-module.exports = piecePositionHoc(BlackPawn)
+module.exports = piecePositionHoc(BlackPawn);

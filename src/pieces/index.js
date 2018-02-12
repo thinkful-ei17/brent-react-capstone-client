@@ -12,5 +12,5 @@ module.exports = {
   B: require('./WhiteBishop'),
   R: require('./WhiteRook'),
   Q: require('./WhiteQueen'),
-  K: require('./WhiteKing')
-}
+  K: require('./WhiteKing'),
+};

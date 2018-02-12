@@ -1,9 +1,10 @@
-/* eslint-disable react/display-name, react/prop-types */
-const React = require('react')
-
-module.exports = Piece => props => {
-  const {onMouseDown, onMouseUp, onTouchEnd, onTouchStart, style, isMoving} = props
-  const y = 7 - props.y
+import React from 'react';
+// change modules to classes or functions
+module.exports = Piece => (props) => {
+  const {
+    onMouseDown, onMouseUp, onTouchEnd, onTouchStart, style, isMoving,
+  } = props;
+  const y = 7 - props.y;
 
   const styles = Object.assign({}, style, {
     position: 'absolute',
@@ -12,8 +13,8 @@ module.exports = Piece => props => {
     width: '12.5%',
     height: '12.5%',
     textAlign: 'center',
-    zIndex: isMoving ? 1000 : undefined
-  })
+    zIndex: isMoving ? 1000 : undefined,
+  });
 
   return (
     <div
@@ -21,8 +22,9 @@ module.exports = Piece => props => {
       onMouseUp={onMouseUp}
       onTouchEnd={onTouchEnd}
       onTouchStart={onTouchStart}
-      style={styles}>
+      style={styles}
+    >
       <Piece size="85%" />
     </div>
-  )
-}
+  );
+};

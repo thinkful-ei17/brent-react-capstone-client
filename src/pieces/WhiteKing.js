@@ -1,5 +1,5 @@
-const React = require('react')
-const piecePositionHoc = require('../piecePositionHoc')
+import React from 'react';
+import piecePositionHoc from '../piecePositionHoc';
 
 function WhiteKing(props) {
   return (
@@ -10,7 +10,8 @@ function WhiteKing(props) {
         stroke="#000"
         strokeWidth="1.5"
         strokeLinecap="round"
-        strokeLinejoin="round">
+        strokeLinejoin="round"
+      >
         <path d="M22.5 11.63V6M20 8h5" strokeLinejoin="miter" />
         <path
           d="M22.5 25s4.5-7.5 3-10.5c0 0-1-2.5-3-2.5s-3 2.5-3 2.5c-1.5 3 3 10.5 3 10.5"
@@ -25,7 +26,7 @@ function WhiteKing(props) {
         <path d="M11.5 30c5.5-3 15.5-3 21 0M11.5 33.5c5.5-3 15.5-3 21 0M11.5 37c5.5-3 15.5-3 21 0" />
       </g>
     </svg>
-  )
+  );
 }
 
-module.exports = piecePositionHoc(WhiteKing)
+module.exports = piecePositionHoc(WhiteKing);
