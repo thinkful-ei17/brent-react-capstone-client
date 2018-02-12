@@ -1,8 +1,10 @@
 import React from 'react';
 import ChessBoard from 'react-chess';
 import Chess from 'chess.js';
+import { connect } from 'react-redux';
+import { makeMove } from './actions';
 
-export default class ChessGame extends React.Component {
+export class ChessGame extends React.Component {
   constructor(props) {
     super(props);
 
@@ -10,18 +12,8 @@ export default class ChessGame extends React.Component {
   }
 
   onMovePiece(piece, from, to) {
-    // Update this.myGame based on the arguments.  If stuff goes wrong then change pieces on board
-    // this.forceUpdate()
-    // console.log('piece is', piece);
-    // console.log('fromSquare is', from);
-    // console.log('toSquare is', to);
-    console.log('this is myGame', this.chess);
-    // while (!this.chess.game_over()) {
-    //   const moves = this.chess.moves();
-    //   const move = moves[Math.floor(Math.random() * moves.length)];
-    //   this.chess.move(move);
-    // }
-    // console.log(this.chess.pgn());
+    const moveObj = { from, to };
+    this.props.dispatch(makeMove(moveObj));
   }
 
   render() {
@@ -34,3 +26,5 @@ export default class ChessGame extends React.Component {
     );
   }
 }
+
+export default connect()(ChessGame);
