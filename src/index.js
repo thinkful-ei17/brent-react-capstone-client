@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Demo from './demo/demo';
+import Chess from './react-chess';
 
-ReactDOM.render(<Demo />, document.getElementById('root'));
+ReactDOM.render(<Chess />, document.getElementById('root'));
