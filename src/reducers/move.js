@@ -11,13 +11,10 @@ const initialState = {
 };
 
 
-const reducer = (state = initialState, action) => {
+export default (state = initialState, action) => {
   if (action.type === MAKE_MOVE) {
-    if (state.move(action.move)) {
-      const moveInfo = state.history({ verbose: true });
-      console.log(moveInfo);
-    } else console.log('invalid move');
+    console.log('action seen');
   }
+  return state;
 };
 
-export default reducer;
