@@ -1,13 +1,13 @@
 import React from 'react';
 import ChessBoard from 'react-chess';
-import Chess from 'chess.js';
 import { connect } from 'react-redux';
+import Chess from './chess-logic';
 import { makeMove } from './actions';
 
 export class ChessGame extends React.Component {
   constructor(props) {
     super(props);
-
+    this.chess = new Chess();
   }
 
   onDragStart(piece) {
