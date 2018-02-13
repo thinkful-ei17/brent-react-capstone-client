@@ -8,7 +8,6 @@ export class ChessGame extends React.Component {
   constructor(props) {
     super(props);
 
-    this.chess = new Chess();
   }
 
   onDragStart(piece) {
@@ -38,3 +37,6 @@ const mapStateToProps = state => ({
   board: state.board,
 });
 export default connect(mapStateToProps)(ChessGame);
+
+
+// player attempts move-> sends a move request to state -> check move rq against 'state.legal moves' ->update state if legal ->trigger re render with new state
