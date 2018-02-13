@@ -1,6 +1,6 @@
-const fenToAlg = (fen) => {
+const fenToAlgebraic = (fen) => {
   const pieces = [];
-  fen = fen.split('/').reverse();
+  const fenArr = fen.split('/').reverse();
   const alphabet = [
     'a',
     'b',
@@ -12,17 +12,17 @@ const fenToAlg = (fen) => {
     'h',
   ];
 
-  for (let i = 0; i < fen.length; i++) {
-    for (let j = 0; j < fen[i].length; j++) {
+  for (let i = 0; i < fenArr.length; i++) {
+    for (let j = 0; j < fenArr[i].length; j++) {
       if (alphabet[j] === undefined) {
         continue;
-      } else if (fen[i][j] === '8') {
+      } else if (fenArr[i][j] === '8') {
         continue;
       } else {
-        pieces.push(`${fen[i][j]}@${alphabet[j]}${i + 1}`);
+        pieces.push(`${fenArr[i][j]}@${alphabet[j]}${i + 1}`);
       }
     }
   }
   return pieces;
 };
-export default fenToAlg;
+export default fenToAlgebraic;
